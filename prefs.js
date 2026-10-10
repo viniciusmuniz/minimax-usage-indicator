@@ -2,7 +2,7 @@ import Gtk from 'gi://Gtk';
 import Adw from 'gi://Adw';
 import Gio from 'gi://Gio';
 import { getSettings } from './modules/settings.js';
-import { getApiKey, setApiKey } from './modules/secrets.js';
+import { getApiKey, setApiKey, clearApiKey } from './modules/secrets.js';
 
 const PRIMARY_WINDOW_OPTIONS = [
     ['auto',     'Auto (most critical)'],
@@ -76,8 +76,27 @@ export default class MiniMaxUsagePrefs {
         const reloadBtn = new Gtk.Button({ label: 'Reload stored' });
         reloadBtn.connect('clicked', () => { loadStored(); });
 
+        const clearBtn = new Gtk.Button({ label: 'Clear stored API key' });
+        clearBtn.add_css_class('destructive-action');
+        clearBtn.connect('clicked', async () => {
+            clearBtn.sensitive = false;
+            keyRow._populating = true;
+            try {
+                await clearApiKey();
+                keyRow.text = '';
+                setStatus('Stored key cleared.');
+            } catch (e) {
+                console.error('Failed to clear API key:', e);
+                setStatus('Clear failed — see logs', true);
+            } finally {
+                keyRow._populating = false;
+                clearBtn.sensitive = true;
+            }
+        });
+
         buttonBox.append(saveBtn);
         buttonBox.append(reloadBtn);
+        buttonBox.append(clearBtn);
         group.add(buttonBox);
 
         window.add(page);
