@@ -1,0 +1,7 @@
+# List of source files that contain translatable strings.
+# xgettext (run by scripts/update-pot.sh) reads this list and extracts
+# every _("..."), _n("...", "...", n), and _f("...", {...}) call.
+extension.js
+prefs.js
+modules/label.js
+modules/popover.js

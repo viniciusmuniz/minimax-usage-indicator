@@ -13,6 +13,7 @@
 
 import St from 'gi://St';
 import Clutter from 'gi://Clutter';
+import { _, _f } from './i18n.js';
 
 const POPOVER_STYLE = `
     background-color: rgba(28, 28, 30, 0.96);
@@ -31,16 +32,17 @@ const WARN_STYLE = 'font-size: 11px; margin-top: 6px; color: #f5c542;';
 const HINT_STYLE = 'font-size: 10px; margin-top: 8px; color: #888; font-style: italic;';
 
 function fmtMinutes(min) {
-    if (min < 60) return `${min}m`;
+    if (min < 60) return _f('{m}m', { m: min });
     const h = Math.floor(min / 60);
     const m = min % 60;
-    return m ? `${h}h ${m}m` : `${h}h`;
+    if (m) return _f('{h}h {m}m', { h, m });
+    return _f('{h}h', { h });
 }
 
 function colorWord(pct) {
-    if (pct >= 95) return 'RED';
-    if (pct >= 80) return 'YELLOW';
-    return 'green';
+    if (pct >= 95) return _('RED');
+    if (pct >= 80) return _('YELLOW');
+    return _('green');
 }
 
 export class QuotaPopover {
@@ -55,12 +57,12 @@ export class QuotaPopover {
         });
         this._widget.set_style(POPOVER_STYLE);
 
-        this._title = new St.Label({ text: 'MiniMax Usage', style: TITLE_STYLE });
+        this._title = new St.Label({ text: _('MiniMax Usage'), style: TITLE_STYLE });
         this._intervalLabel = new St.Label({ text: '', style: LINE_STYLE });
         this._weeklyLabel = new St.Label({ text: '', style: LINE_STYLE });
         this._warnLabel = new St.Label({ text: '', style: WARN_STYLE });
         this._hintLabel = new St.Label({
-            text: 'Middle-click for Preferences  ·  Click again to close',
+            text: _('Middle-click for Preferences  ·  Click again to close'),
             style: HINT_STYLE,
         });
 
@@ -217,17 +219,17 @@ export class QuotaPopover {
 
     _render({ quota, errorKey, lastSuccessPct }) {
         if (errorKey) {
-            this._title.text = 'MiniMax Usage';
+            this._title.text = _('MiniMax Usage');
             this._intervalLabel.text = errorKey;
             this._weeklyLabel.text = '';
             this._warnLabel.text = '';
             return;
         }
         if (!quota) {
-            this._title.text = 'MiniMax Usage';
+            this._title.text = _('MiniMax Usage');
             this._intervalLabel.text = lastSuccessPct != null
-                ? `Awaiting data — last seen: ${lastSuccessPct}%`
-                : 'Awaiting first refresh…';
+                ? _f('Awaiting data — last seen: {pct}%', { pct: lastSuccessPct })
+                : _('Awaiting first refresh…');
             this._weeklyLabel.text = '';
             this._warnLabel.text = '';
             return;
@@ -237,12 +239,21 @@ export class QuotaPopover {
             ? Math.round((interval.used / interval.total) * 100) : 0;
         const wPct = weekly.total > 0
             ? Math.round((weekly.used / weekly.total) * 100) : 0;
-        this._title.text = `MiniMax Usage  ·  ${quota.model_name ?? 'general'}`;
-        this._intervalLabel.text = `5h:    ${iPct}% (${interval.used}/${interval.total})  ·  reset in ${fmtMinutes(interval.minutesRemaining)}`;
-        this._weeklyLabel.text   = `Week:  ${wPct}% (${weekly.used}/${weekly.total})  ·  reset in ${fmtMinutes(weekly.minutesRemaining)}`;
+        const model = quota.model_name ?? _('general');
+        this._title.text = _f('MiniMax Usage  ·  {model}', { model });
+        this._intervalLabel.text = _f(
+            '5h:    {pct}% ({used}/{total})  ·  reset in {reset}',
+            { pct: iPct, used: interval.used, total: interval.total,
+              reset: fmtMinutes(interval.minutesRemaining) },
+        );
+        this._weeklyLabel.text = _f(
+            'Week:  {pct}% ({used}/{total})  ·  reset in {reset}',
+            { pct: wPct, used: weekly.used, total: weekly.total,
+              reset: fmtMinutes(weekly.minutesRemaining) },
+        );
         const warns = [];
-        if (iPct >= 80) warns.push(`⚠ 5h at ${colorWord(iPct)} threshold`);
-        if (wPct >= 80) warns.push(`⚠ Weekly at ${colorWord(wPct)} threshold`);
+        if (iPct >= 80) warns.push(_f('⚠ 5h at {color} threshold', { color: colorWord(iPct) }));
+        if (wPct >= 80) warns.push(_f('⚠ Weekly at {color} threshold', { color: colorWord(wPct) }));
         this._warnLabel.text = warns.join('   ');
     }
 }

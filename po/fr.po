@@ -1,0 +1,166 @@
+# French translation for MiniMax Usage Indicator.
+# Copyright (C) 2026.
+# This file is distributed under the same license as the package.
+msgid ""
+msgstr ""
+"Project-Id-Version: minimax-usage-indicator 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/viniciusmuniz/minimax-usage-indicator/issues\n"
+"POT-Creation-Date: 2026-10-10 12:00+0000\n"
+"PO-Revision-Date: 2026-10-10 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Keyring unavailable — see logs"
+msgstr "Trousseau indisponible — voir les journaux"
+
+msgid "No API key — open Preferences"
+msgstr "Aucune clé d'API — ouvrez les Préférences"
+
+msgid "Invalid API key — open Preferences"
+msgstr "Clé d'API invalide — ouvrez les Préférences"
+
+msgid "Rate limited, retry in {sec}s"
+msgstr "Limite de requêtes, réessayez dans {sec} s"
+
+msgid "MiniMax API unavailable (HTTP {status})"
+msgstr "API MiniMax indisponible (HTTP {status})"
+
+msgid "Network error"
+msgstr "Erreur réseau"
+
+msgid "API response changed — see logs"
+msgstr "Réponse de l'API modifiée — voir les journaux"
+
+msgid "Unknown error"
+msgstr "Erreur inconnue"
+
+msgid "Auto (most critical)"
+msgstr "Automatique (le plus critique)"
+
+msgid "5h interval"
+msgstr "Intervalle 5 h"
+
+msgid "Weekly"
+msgstr "Hebdomadaire"
+
+msgid "MiniMax API"
+msgstr "API MiniMax"
+
+msgid "API Key"
+msgstr "Clé d'API"
+
+msgid "Stored key loaded."
+msgstr "Clé stockée chargée."
+
+msgid "No key stored yet."
+msgstr "Aucune clé stockée pour l'instant."
+
+msgid "Failed to read keyring — see logs"
+msgstr "Échec de lecture du trousseau — voir les journaux"
+
+msgid "Save"
+msgstr "Enregistrer"
+
+msgid "Cannot save an empty key."
+msgstr "Impossible d'enregistrer une clé vide."
+
+msgid "Saved to GNOME Keyring."
+msgstr "Enregistré dans le Trousseau GNOME."
+
+msgid "Save failed — see logs"
+msgstr "Échec de l'enregistrement — voir les journaux"
+
+msgid "Reload stored"
+msgstr "Recharger la clé stockée"
+
+msgid "Clear stored API key"
+msgstr "Effacer la clé d'API stockée"
+
+msgid "Stored key cleared."
+msgstr "Clé stockée effacée."
+
+msgid "Clear failed — see logs"
+msgstr "Échec de l'effacement — voir les journaux"
+
+msgid "Behavior"
+msgstr "Comportement"
+
+msgid "Refresh interval (seconds)"
+msgstr "Intervalle d'actualisation (secondes)"
+
+msgid "Top bar shows"
+msgstr "La barre supérieure affiche"
+
+msgid "Display"
+msgstr "Affichage"
+
+msgid "Show weekly window"
+msgstr "Afficher la fenêtre hebdomadaire"
+
+msgid "Display the weekly usage window in the dropdown menu"
+msgstr "Affiche la fenêtre d'utilisation hebdomadaire dans le menu déroulant"
+
+msgid "Show countdown"
+msgstr "Afficher le compte à rebours"
+
+msgid "Display a countdown timer in the top bar"
+msgstr "Affiche un compte à rebours dans la barre supérieure"
+
+msgid "{pct}% · {h}h {m}m"
+msgstr "{pct} % · {h} h {m} m"
+
+msgid "{pct}%"
+msgstr "{pct} %"
+
+msgid "{m}m"
+msgstr "{m} m"
+
+msgid "{h}h {m}m"
+msgstr "{h} h {m} m"
+
+msgid "{h}h"
+msgstr "{h} h"
+
+msgid "RED"
+msgstr "ROUGE"
+
+msgid "YELLOW"
+msgstr "JAUNE"
+
+msgid "green"
+msgstr "vert"
+
+msgid "MiniMax Usage"
+msgstr "Utilisation MiniMax"
+
+msgid "Middle-click for Preferences  ·  Click again to close"
+msgstr "Clic central pour les Préférences  ·  Cliquez à nouveau pour fermer"
+
+msgid "general"
+msgstr "général"
+
+msgid "Awaiting data — last seen: {pct}%"
+msgstr "En attente de données — dernière valeur : {pct} %"
+
+msgid "Awaiting first refresh…"
+msgstr "En attente de la première actualisation…"
+
+msgid "MiniMax Usage  ·  {model}"
+msgstr "Utilisation MiniMax  ·  {model}"
+
+msgid "5h:    {pct}% ({used}/{total})  ·  reset in {reset}"
+msgstr "5 h :    {pct} % ({used}/{total})  ·  renouveau dans {reset}"
+
+msgid "Week:  {pct}% ({used}/{total})  ·  reset in {reset}"
+msgstr "Semaine : {pct} % ({used}/{total})  ·  renouveau dans {reset}"
+
+msgid "⚠ 5h at {color} threshold"
+msgstr "⚠ 5 h au seuil {color}"
+
+msgid "⚠ Weekly at {color} threshold"
+msgstr "⚠ Hebdomadaire au seuil {color}"

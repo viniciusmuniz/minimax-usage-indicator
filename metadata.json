@@ -3,6 +3,7 @@
   "name": "MiniMax Usage Indicator",
   "description": "Show MiniMax API quota (5h + weekly) in the GNOME top bar.",
   "url": "https://github.com/viniciusmuniz/minimax-usage-indicator",
+  "gettext-domain": "minimax-usage-indicator",
   "shell-version": ["45", "46", "47", "48", "49", "50"],
   "version": 1,
   "settings-schema": "org.gnome.shell.extensions.minimax-usage"

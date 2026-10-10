@@ -1,0 +1,166 @@
+# German translation for MiniMax Usage Indicator.
+# Copyright (C) 2026.
+# This file is distributed under the same license as the package.
+msgid ""
+msgstr ""
+"Project-Id-Version: minimax-usage-indicator 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/viniciusmuniz/minimax-usage-indicator/issues\n"
+"POT-Creation-Date: 2026-10-10 12:00+0000\n"
+"PO-Revision-Date: 2026-10-10 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Keyring unavailable — see logs"
+msgstr "Schlüsselbund nicht verfügbar — siehe Protokolle"
+
+msgid "No API key — open Preferences"
+msgstr "Kein API-Schlüssel — Einstellungen öffnen"
+
+msgid "Invalid API key — open Preferences"
+msgstr "Ungültiger API-Schlüssel — Einstellungen öffnen"
+
+msgid "Rate limited, retry in {sec}s"
+msgstr "Ratenbegrenzung, erneut versuchen in {sec} s"
+
+msgid "MiniMax API unavailable (HTTP {status})"
+msgstr "MiniMax-API nicht verfügbar (HTTP {status})"
+
+msgid "Network error"
+msgstr "Netzwerkfehler"
+
+msgid "API response changed — see logs"
+msgstr "API-Antwort geändert — siehe Protokolle"
+
+msgid "Unknown error"
+msgstr "Unbekannter Fehler"
+
+msgid "Auto (most critical)"
+msgstr "Automatisch (am kritischsten)"
+
+msgid "5h interval"
+msgstr "5-Stunden-Intervall"
+
+msgid "Weekly"
+msgstr "Wöchentlich"
+
+msgid "MiniMax API"
+msgstr "MiniMax-API"
+
+msgid "API Key"
+msgstr "API-Schlüssel"
+
+msgid "Stored key loaded."
+msgstr "Gespeicherter Schlüssel geladen."
+
+msgid "No key stored yet."
+msgstr "Noch kein Schlüssel gespeichert."
+
+msgid "Failed to read keyring — see logs"
+msgstr "Schlüsselbund konnte nicht gelesen werden — siehe Protokolle"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Cannot save an empty key."
+msgstr "Ein leerer Schlüssel kann nicht gespeichert werden."
+
+msgid "Saved to GNOME Keyring."
+msgstr "Im GNOME-Schlüsselbund gespeichert."
+
+msgid "Save failed — see logs"
+msgstr "Speichern fehlgeschlagen — siehe Protokolle"
+
+msgid "Reload stored"
+msgstr "Gespeicherten neu laden"
+
+msgid "Clear stored API key"
+msgstr "Gespeicherten API-Schlüssel löschen"
+
+msgid "Stored key cleared."
+msgstr "Gespeicherter Schlüssel gelöscht."
+
+msgid "Clear failed — see logs"
+msgstr "Löschen fehlgeschlagen — siehe Protokolle"
+
+msgid "Behavior"
+msgstr "Verhalten"
+
+msgid "Refresh interval (seconds)"
+msgstr "Aktualisierungsintervall (Sekunden)"
+
+msgid "Top bar shows"
+msgstr "Obere Leiste zeigt"
+
+msgid "Display"
+msgstr "Anzeige"
+
+msgid "Show weekly window"
+msgstr "Wochenfenster anzeigen"
+
+msgid "Display the weekly usage window in the dropdown menu"
+msgstr "Zeigt das wöchentliche Nutzungsfenster im Dropdown-Menü"
+
+msgid "Show countdown"
+msgstr "Countdown anzeigen"
+
+msgid "Display a countdown timer in the top bar"
+msgstr "Zeigt einen Countdown in der oberen Leiste"
+
+msgid "{pct}% · {h}h {m}m"
+msgstr "{pct} % · {h} h {m} m"
+
+msgid "{pct}%"
+msgstr "{pct} %"
+
+msgid "{m}m"
+msgstr "{m} m"
+
+msgid "{h}h {m}m"
+msgstr "{h} h {m} m"
+
+msgid "{h}h"
+msgstr "{h} h"
+
+msgid "RED"
+msgstr "ROT"
+
+msgid "YELLOW"
+msgstr "GELB"
+
+msgid "green"
+msgstr "grün"
+
+msgid "MiniMax Usage"
+msgstr "MiniMax-Nutzung"
+
+msgid "Middle-click for Preferences  ·  Click again to close"
+msgstr "Mittelklick für Einstellungen  ·  Erneut klicken zum Schließen"
+
+msgid "general"
+msgstr "Allgemein"
+
+msgid "Awaiting data — last seen: {pct}%"
+msgstr "Warte auf Daten — zuletzt gesehen: {pct} %"
+
+msgid "Awaiting first refresh…"
+msgstr "Warte auf erste Aktualisierung…"
+
+msgid "MiniMax Usage  ·  {model}"
+msgstr "MiniMax-Nutzung  ·  {model}"
+
+msgid "5h:    {pct}% ({used}/{total})  ·  reset in {reset}"
+msgstr "5h:    {pct} % ({used}/{total})  ·  Reset in {reset}"
+
+msgid "Week:  {pct}% ({used}/{total})  ·  reset in {reset}"
+msgstr "Woche: {pct} % ({used}/{total})  ·  Reset in {reset}"
+
+msgid "⚠ 5h at {color} threshold"
+msgstr "⚠ 5h-Schwelle: {color}"
+
+msgid "⚠ Weekly at {color} threshold"
+msgstr "⚠ Wöchentliche Schwelle: {color}"

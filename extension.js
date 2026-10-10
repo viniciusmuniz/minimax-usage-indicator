@@ -3,6 +3,7 @@
 import GLib from 'gi://GLib';
 import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import { initI18n, _, _f } from './modules/i18n.js';
 import { getSettings } from './modules/settings.js';
 import {
     fetchQuota,
@@ -22,6 +23,7 @@ import {
 
 export default class MiniMaxUsageExtension extends Extension {
     enable() {
+        initI18n();
         this._settings = getSettings();
         this._panel = new PanelHost({
             primaryWindow: this._settings.get_string('primary-window'),
@@ -73,11 +75,11 @@ export default class MiniMaxUsageExtension extends Extension {
             key = await getApiKey();
         } catch (e) {
             logError(e);
-            this._panel.setError('⚠', 'Keyring unavailable — see logs');
+            this._panel.setError('⚠', _('Keyring unavailable — see logs'));
             return { ok: false, error: e };
         }
         if (!key) {
-            this._panel.setError('⚙', 'No API key — open Preferences');
+            this._panel.setError('⚙', _('No API key — open Preferences'));
             return { ok: false };
         }
         try {
@@ -92,17 +94,17 @@ export default class MiniMaxUsageExtension extends Extension {
 
     _handleError(e) {
         if (e instanceof QuotaAuthError) {
-            this._panel.setError('🔑', 'Invalid API key — open Preferences');
+            this._panel.setError('🔑', _('Invalid API key — open Preferences'));
         } else if (e instanceof QuotaRateLimitError) {
-            this._panel.setError('⏳', `Rate limited, retry in ${e.retryAfterSec}s`);
+            this._panel.setError('⏳', _f('Rate limited, retry in {sec}s', { sec: e.retryAfterSec }));
         } else if (e instanceof QuotaServerError) {
-            this._panel.setError('⚠', `MiniMax API unavailable (HTTP ${e.status})`);
+            this._panel.setError('⚠', _f('MiniMax API unavailable (HTTP {status})', { status: e.status }));
         } else if (e instanceof QuotaNetworkError) {
-            this._panel.setError('⚠', 'Network error');
+            this._panel.setError('⚠', _('Network error'));
         } else if (e instanceof QuotaParseError) {
-            this._panel.setError('⚠', 'API response changed — see logs');
+            this._panel.setError('⚠', _('API response changed — see logs'));
         } else {
-            this._panel.setError('⚠', 'Unknown error');
+            this._panel.setError('⚠', _('Unknown error'));
             logError(e);
         }
     }

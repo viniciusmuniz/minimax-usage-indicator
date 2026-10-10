@@ -1,0 +1,166 @@
+# English translation for MiniMax Usage Indicator.
+# Copyright (C) 2026.
+# This file is distributed under the same license as the package.
+msgid ""
+msgstr ""
+"Project-Id-Version: minimax-usage-indicator 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/viniciusmuniz/minimax-usage-indicator/issues\n"
+"POT-Creation-Date: 2026-10-10 12:00+0000\n"
+"PO-Revision-Date: 2026-10-10 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Keyring unavailable — see logs"
+msgstr "Keyring unavailable — see logs"
+
+msgid "No API key — open Preferences"
+msgstr "No API key — open Preferences"
+
+msgid "Invalid API key — open Preferences"
+msgstr "Invalid API key — open Preferences"
+
+msgid "Rate limited, retry in {sec}s"
+msgstr "Rate limited, retry in {sec}s"
+
+msgid "MiniMax API unavailable (HTTP {status})"
+msgstr "MiniMax API unavailable (HTTP {status})"
+
+msgid "Network error"
+msgstr "Network error"
+
+msgid "API response changed — see logs"
+msgstr "API response changed — see logs"
+
+msgid "Unknown error"
+msgstr "Unknown error"
+
+msgid "Auto (most critical)"
+msgstr "Auto (most critical)"
+
+msgid "5h interval"
+msgstr "5h interval"
+
+msgid "Weekly"
+msgstr "Weekly"
+
+msgid "MiniMax API"
+msgstr "MiniMax API"
+
+msgid "API Key"
+msgstr "API Key"
+
+msgid "Stored key loaded."
+msgstr "Stored key loaded."
+
+msgid "No key stored yet."
+msgstr "No key stored yet."
+
+msgid "Failed to read keyring — see logs"
+msgstr "Failed to read keyring — see logs"
+
+msgid "Save"
+msgstr "Save"
+
+msgid "Cannot save an empty key."
+msgstr "Cannot save an empty key."
+
+msgid "Saved to GNOME Keyring."
+msgstr "Saved to GNOME Keyring."
+
+msgid "Save failed — see logs"
+msgstr "Save failed — see logs"
+
+msgid "Reload stored"
+msgstr "Reload stored"
+
+msgid "Clear stored API key"
+msgstr "Clear stored API key"
+
+msgid "Stored key cleared."
+msgstr "Stored key cleared."
+
+msgid "Clear failed — see logs"
+msgstr "Clear failed — see logs"
+
+msgid "Behavior"
+msgstr "Behavior"
+
+msgid "Refresh interval (seconds)"
+msgstr "Refresh interval (seconds)"
+
+msgid "Top bar shows"
+msgstr "Top bar shows"
+
+msgid "Display"
+msgstr "Display"
+
+msgid "Show weekly window"
+msgstr "Show weekly window"
+
+msgid "Display the weekly usage window in the dropdown menu"
+msgstr "Display the weekly usage window in the dropdown menu"
+
+msgid "Show countdown"
+msgstr "Show countdown"
+
+msgid "Display a countdown timer in the top bar"
+msgstr "Display a countdown timer in the top bar"
+
+msgid "{pct}% · {h}h {m}m"
+msgstr "{pct}% · {h}h {m}m"
+
+msgid "{pct}%"
+msgstr "{pct}%"
+
+msgid "{m}m"
+msgstr "{m}m"
+
+msgid "{h}h {m}m"
+msgstr "{h}h {m}m"
+
+msgid "{h}h"
+msgstr "{h}h"
+
+msgid "RED"
+msgstr "RED"
+
+msgid "YELLOW"
+msgstr "YELLOW"
+
+msgid "green"
+msgstr "green"
+
+msgid "MiniMax Usage"
+msgstr "MiniMax Usage"
+
+msgid "Middle-click for Preferences  ·  Click again to close"
+msgstr "Middle-click for Preferences  ·  Click again to close"
+
+msgid "general"
+msgstr "general"
+
+msgid "Awaiting data — last seen: {pct}%"
+msgstr "Awaiting data — last seen: {pct}%"
+
+msgid "Awaiting first refresh…"
+msgstr "Awaiting first refresh…"
+
+msgid "MiniMax Usage  ·  {model}"
+msgstr "MiniMax Usage  ·  {model}"
+
+msgid "5h:    {pct}% ({used}/{total})  ·  reset in {reset}"
+msgstr "5h:    {pct}% ({used}/{total})  ·  reset in {reset}"
+
+msgid "Week:  {pct}% ({used}/{total})  ·  reset in {reset}"
+msgstr "Week:  {pct}% ({used}/{total})  ·  reset in {reset}"
+
+msgid "⚠ 5h at {color} threshold"
+msgstr "⚠ 5h at {color} threshold"
+
+msgid "⚠ Weekly at {color} threshold"
+msgstr "⚠ Weekly at {color} threshold"

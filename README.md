@@ -19,10 +19,12 @@ GNOME Shell extension that shows the **MiniMax API coding-plan quota**
 On Debian / Ubuntu:
 
 ```bash
-sudo apt install gnome-shell-extensions libgnome-keyring-dev zip libglib2.0-bin
+sudo apt install gnome-shell-extensions libgnome-keyring-dev zip libglib2.0-bin gettext
 ```
 
 `python3` is required by `build.sh` and is pre-installed on most systems.
+`gettext` is only needed to compile translations (the extension works
+without it; the user-facing strings simply fall back to English).
 
 ## Install
 
@@ -82,6 +84,66 @@ Run this before tagging a release.
 node --test test_modules/
 ```
 
+## Translations
+
+The extension uses GNU gettext. The `po/` directory contains one
+`.po` file per language. The build compiles them to `.mo` files in
+`locale/<lang>/LC_MESSAGES/minimax-usage-indicator.mo` and bundles
+them in the extension zip, so translations work for end users
+without any extra setup on their system.
+
+**Currently shipped:** English, Portuguese (Brazil), Spanish, French,
+German, Italian.
+
+### Adding a new language
+
+You do not need to touch any JavaScript. The workflow:
+
+1. Copy the template:
+   ```bash
+   cp po/minimax-usage-indicator.pot po/<lang>.po
+   ```
+   Use the [BCP 47 / GNU locale code](https://www.gnu.org/software/gettext/manual/html_node/Language-Codes.html)
+   for the filename — `pt_BR.po` for Brazilian Portuguese, `zh_CN.po`
+   for Simplified Chinese, `en_GB.po` for British English, etc.
+2. Open the new `.po` in any PO editor
+   ([POedit](https://poedit.net/), [Gtranslator](https://gitlab.gnome.org/GNOME/gtranslator),
+   or a plain text editor) and translate every `msgid`. Keep
+   `{pct}`, `{h}`, `{m}`, `{sec}`, `{status}`, `{used}`, `{total}`,
+   `{reset}`, `{color}`, `{model}` exactly as written — they are
+   placeholders that get substituted in JS.
+3. Set the `Language:` header to your language code and adjust
+   `Plural-Forms` if your language has more than two plural forms
+   (Polish, Russian, Arabic, …). Defaults from the GNU gettext
+   reference cover most languages.
+4. Open a PR with just the new `.po` file. The build script picks
+   it up automatically.
+
+### Updating the template
+
+If you add or reword a translatable string in the JavaScript code,
+regenerate the template so translators can sync their `.po` files:
+
+```bash
+./scripts/update-pot.sh
+```
+
+Commit the resulting `po/minimax-usage-indicator.pot`. The same
+script is what your reviewers will run on PRs to verify nothing was
+missed.
+
+### How strings are wrapped
+
+- `_('simple text')` — straight lookup, no placeholders.
+- `_f('Quota at {pct}%', { pct: 42 })` — translation with named
+  placeholders. The `.po` keeps the `{name}` tokens; JS substitutes
+  them in. This avoids the `printf %s` style that translators
+  commonly get wrong.
+- `_n('one error', '{n} errors', n)` — plural forms. Not used yet,
+  but the header in every `.po` already declares the right
+  `Plural-Forms` rule for the language so adding plural strings
+  later is a one-line change.
+
 ## Data source
 
 - Endpoint: `GET https://www.minimax.io/v1/api/openplatform/coding_plan/remains`
@@ -101,7 +163,9 @@ extensions.
 ## Contributing
 
 Issues and pull requests welcome on GitHub. Please run `node --test test_modules/`
-before submitting.
+before submitting. Translation PRs are especially appreciated — see
+the [Translations](#translations) section above; no JavaScript changes
+are needed to add a language.
 
 ## License
 

@@ -1,0 +1,219 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: minimax-usage-indicator 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/viniciusmuniz/minimax-usage-indicator/issues\n"
+"POT-Creation-Date: 2026-10-10 12:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: extension.js:83
+msgid "Keyring unavailable — see logs"
+msgstr ""
+
+#: extension.js:89
+msgid "No API key — open Preferences"
+msgstr ""
+
+#: extension.js:101
+msgid "Invalid API key — open Preferences"
+msgstr ""
+
+#: extension.js:103
+msgid "Rate limited, retry in {sec}s"
+msgstr ""
+
+#: extension.js:105
+msgid "MiniMax API unavailable (HTTP {status})"
+msgstr ""
+
+#: extension.js:107
+msgid "Network error"
+msgstr ""
+
+#: extension.js:109
+msgid "API response changed — see logs"
+msgstr ""
+
+#: extension.js:111
+msgid "Unknown error"
+msgstr ""
+
+#: prefs.js:8
+msgid "Auto (most critical)"
+msgstr ""
+
+#: prefs.js:9
+msgid "5h interval"
+msgstr ""
+
+#: prefs.js:10
+msgid "Weekly"
+msgstr ""
+
+#: prefs.js:21
+msgid "MiniMax API"
+msgstr ""
+
+#: prefs.js:24
+msgid "API Key"
+msgstr ""
+
+#: prefs.js:41
+msgid "Stored key loaded."
+msgstr ""
+
+#: prefs.js:43
+msgid "No key stored yet."
+msgstr ""
+
+#: prefs.js:46
+msgid "Failed to read keyring — see logs"
+msgstr ""
+
+#: prefs.js:56
+msgid "Save"
+msgstr ""
+
+#: prefs.js:62
+msgid "Cannot save an empty key."
+msgstr ""
+
+#: prefs.js:68
+msgid "Saved to GNOME Keyring."
+msgstr ""
+
+#: prefs.js:70
+msgid "Save failed — see logs"
+msgstr ""
+
+#: prefs.js:75
+msgid "Reload stored"
+msgstr ""
+
+#: prefs.js:78
+msgid "Clear stored API key"
+msgstr ""
+
+#: prefs.js:88
+msgid "Stored key cleared."
+msgstr ""
+
+#: prefs.js:90
+msgid "Clear failed — see logs"
+msgstr ""
+
+#: prefs.js:106
+msgid "Behavior"
+msgstr ""
+
+#: prefs.js:118
+msgid "Refresh interval (seconds)"
+msgstr ""
+
+#: prefs.js:135
+msgid "Top bar shows"
+msgstr ""
+
+#: prefs.js:140
+msgid "Display"
+msgstr ""
+
+#: prefs.js:144
+msgid "Show weekly window"
+msgstr ""
+
+#: prefs.js:145
+msgid "Display the weekly usage window in the dropdown menu"
+msgstr ""
+
+#: prefs.js:151
+msgid "Show countdown"
+msgstr ""
+
+#: prefs.js:152
+msgid "Display a countdown timer in the top bar"
+msgstr ""
+
+#: modules/label.js:14
+msgid "{pct}% · {h}h {m}m"
+msgstr ""
+
+#: modules/label.js:13
+msgid "{pct}%"
+msgstr ""
+
+#: modules/popover.js:42
+msgid "{m}m"
+msgstr ""
+
+#: modules/popover.js:46
+msgid "{h}h {m}m"
+msgstr ""
+
+#: modules/popover.js:47
+msgid "{h}h"
+msgstr ""
+
+#: modules/popover.js:52
+msgid "RED"
+msgstr ""
+
+#: modules/popover.js:54
+msgid "YELLOW"
+msgstr ""
+
+#: modules/popover.js:55
+msgid "green"
+msgstr ""
+
+#: modules/popover.js:62 modules/popover.js:228 modules/popover.js:234
+msgid "MiniMax Usage"
+msgstr ""
+
+#: modules/popover.js:66
+msgid "Middle-click for Preferences  ·  Click again to close"
+msgstr ""
+
+#: modules/popover.js:237
+msgid "general"
+msgstr ""
+
+#: modules/popover.js:236
+msgid "Awaiting data — last seen: {pct}%"
+msgstr ""
+
+#: modules/popover.js:237
+msgid "Awaiting first refresh…"
+msgstr ""
+
+#: modules/popover.js:240
+msgid "MiniMax Usage  ·  {model}"
+msgstr ""
+
+#: modules/popover.js:241
+msgid "5h:    {pct}% ({used}/{total})  ·  reset in {reset}"
+msgstr ""
+
+#: modules/popover.js:245
+msgid "Week:  {pct}% ({used}/{total})  ·  reset in {reset}"
+msgstr ""
+
+#: modules/popover.js:251
+msgid "⚠ 5h at {color} threshold"
+msgstr ""
+
+#: modules/popover.js:252
+msgid "⚠ Weekly at {color} threshold"
+msgstr ""

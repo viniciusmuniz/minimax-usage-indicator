@@ -1,0 +1,166 @@
+# Portuguese (Brazil) translation for MiniMax Usage Indicator.
+# Copyright (C) 2026.
+# This file is distributed under the same license as the package.
+msgid ""
+msgstr ""
+"Project-Id-Version: minimax-usage-indicator 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/viniciusmuniz/minimax-usage-indicator/issues\n"
+"POT-Creation-Date: 2026-10-10 12:00+0000\n"
+"PO-Revision-Date: 2026-10-10 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Keyring unavailable — see logs"
+msgstr "Chaveiro indisponível — veja os logs"
+
+msgid "No API key — open Preferences"
+msgstr "Nenhuma chave de API — abra as Preferências"
+
+msgid "Invalid API key — open Preferences"
+msgstr "Chave de API inválida — abra as Preferências"
+
+msgid "Rate limited, retry in {sec}s"
+msgstr "Limite de requisições, tente novamente em {sec}s"
+
+msgid "MiniMax API unavailable (HTTP {status})"
+msgstr "API do MiniMax indisponível (HTTP {status})"
+
+msgid "Network error"
+msgstr "Erro de rede"
+
+msgid "API response changed — see logs"
+msgstr "Resposta da API mudou — veja os logs"
+
+msgid "Unknown error"
+msgstr "Erro desconhecido"
+
+msgid "Auto (most critical)"
+msgstr "Automático (mais crítico)"
+
+msgid "5h interval"
+msgstr "Intervalo de 5h"
+
+msgid "Weekly"
+msgstr "Semanal"
+
+msgid "MiniMax API"
+msgstr "API do MiniMax"
+
+msgid "API Key"
+msgstr "Chave de API"
+
+msgid "Stored key loaded."
+msgstr "Chave armazenada carregada."
+
+msgid "No key stored yet."
+msgstr "Nenhuma chave armazenada ainda."
+
+msgid "Failed to read keyring — see logs"
+msgstr "Falha ao ler o chaveiro — veja os logs"
+
+msgid "Save"
+msgstr "Salvar"
+
+msgid "Cannot save an empty key."
+msgstr "Não é possível salvar uma chave vazia."
+
+msgid "Saved to GNOME Keyring."
+msgstr "Salvo no Chaveiro do GNOME."
+
+msgid "Save failed — see logs"
+msgstr "Falha ao salvar — veja os logs"
+
+msgid "Reload stored"
+msgstr "Recarregar armazenada"
+
+msgid "Clear stored API key"
+msgstr "Apagar chave de API armazenada"
+
+msgid "Stored key cleared."
+msgstr "Chave armazenada apagada."
+
+msgid "Clear failed — see logs"
+msgstr "Falha ao apagar — veja os logs"
+
+msgid "Behavior"
+msgstr "Comportamento"
+
+msgid "Refresh interval (seconds)"
+msgstr "Intervalo de atualização (segundos)"
+
+msgid "Top bar shows"
+msgstr "A barra superior mostra"
+
+msgid "Display"
+msgstr "Exibição"
+
+msgid "Show weekly window"
+msgstr "Mostrar janela semanal"
+
+msgid "Display the weekly usage window in the dropdown menu"
+msgstr "Exibe a janela de uso semanal no menu suspenso"
+
+msgid "Show countdown"
+msgstr "Mostrar contagem regressiva"
+
+msgid "Display a countdown timer in the top bar"
+msgstr "Exibe um cronômetro regressivo na barra superior"
+
+msgid "{pct}% · {h}h {m}m"
+msgstr "{pct}% · {h}h {m}m"
+
+msgid "{pct}%"
+msgstr "{pct}%"
+
+msgid "{m}m"
+msgstr "{m}m"
+
+msgid "{h}h {m}m"
+msgstr "{h}h {m}m"
+
+msgid "{h}h"
+msgstr "{h}h"
+
+msgid "RED"
+msgstr "VERMELHO"
+
+msgid "YELLOW"
+msgstr "AMARELO"
+
+msgid "green"
+msgstr "verde"
+
+msgid "MiniMax Usage"
+msgstr "Uso do MiniMax"
+
+msgid "Middle-click for Preferences  ·  Click again to close"
+msgstr "Clique do meio para Preferências  ·  Clique de novo para fechar"
+
+msgid "general"
+msgstr "geral"
+
+msgid "Awaiting data — last seen: {pct}%"
+msgstr "Aguardando dados — último valor: {pct}%"
+
+msgid "Awaiting first refresh…"
+msgstr "Aguardando primeira atualização…"
+
+msgid "MiniMax Usage  ·  {model}"
+msgstr "Uso do MiniMax  ·  {model}"
+
+msgid "5h:    {pct}% ({used}/{total})  ·  reset in {reset}"
+msgstr "5h:    {pct}% ({used}/{total})  ·  renova em {reset}"
+
+msgid "Week:  {pct}% ({used}/{total})  ·  reset in {reset}"
+msgstr "Semana: {pct}% ({used}/{total})  ·  renova em {reset}"
+
+msgid "⚠ 5h at {color} threshold"
+msgstr "⚠ 5h no limite {color}"
+
+msgid "⚠ Weekly at {color} threshold"
+msgstr "⚠ Semanal no limite {color}"

@@ -17,6 +17,7 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import { Button } from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import { pickCriticalWindow } from './window-picker.js';
 import { labelFor } from './label.js';
+import { gettext } from './i18n.js';
 import { QuotaPopover } from './popover.js';
 
 export function colorForPct(pct) {
@@ -148,7 +149,7 @@ export class PanelHost {
         }
         const windowKey = pickCriticalWindow(quota, this._primaryWindow);
         const showCountdown = this._settings?.get_boolean('show-countdown') ?? true;
-        const text = labelFor(quota, windowKey, showCountdown);
+        const text = labelFor(quota, windowKey, showCountdown, gettext);
         const w = quota[windowKey];
         const pct = w.total > 0 ? Math.round((w.used / w.total) * 100) : 0;
         this._lastSuccessPct = pct;
