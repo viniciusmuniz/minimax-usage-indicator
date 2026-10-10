@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.minimax-usage" path="/org/gnome/shell/extensions/minimax-usage/">
+    <key name="refresh-interval" type="i">
+      <default>300</default>
+      <range min="60" max="3600"/>
+      <summary>Refresh interval (seconds)</summary>
+    </key>
+    <key name="primary-window" type="s">
+      <default>"auto"</default>
+      <choices>
+        <choice value="auto"/>
+        <choice value="interval"/>
+        <choice value="weekly"/>
+      </choices>
+      <summary>Which window to show in the top bar</summary>
+    </key>
+    <key name="show-weekly" type="b">
+      <default>true</default>
+      <summary>Show weekly window in the dropdown</summary>
+    </key>
+    <key name="show-countdown" type="b">
+      <default>true</default>
+      <summary>Show countdown in the top bar</summary>
+    </key>
+  </schema>
+</schemalist>

@@ -2,7 +2,7 @@
   "uuid": "minimax-usage-indicator@local",
   "name": "MiniMax Usage Indicator",
   "description": "Show MiniMax API quota (5h + weekly) in the GNOME top bar.",
-  "shell-version": ["45", "46", "47"],
+  "shell-version": ["45", "46", "47", "48", "49", "50"],
   "version": 1,
   "settings-schema": "org.gnome.shell.extensions.minimax-usage"
 }
