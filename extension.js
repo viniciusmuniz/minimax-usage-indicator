@@ -31,8 +31,9 @@ export default class MiniMaxUsageExtension extends Extension {
         });
         this._panel.enable();
         // Propagate 'primary-window' setting changes to the panel so the label
-        // reflects the new choice on the next refresh.
-        this._settings.connect('changed::primary-window', () => {
+        // reflects the new choice on the next refresh. Track the signal id so
+        // we can disconnect it in disable(). (EGO-L-003)
+        this._primaryWindowChangedId = this._settings.connect('changed::primary-window', () => {
             this._panel.setPrimaryWindow(this._settings.get_string('primary-window'));
         });
         this._scheduleNext();
@@ -44,6 +45,10 @@ export default class MiniMaxUsageExtension extends Extension {
         if (this._timeoutId) {
             GLib.source_remove(this._timeoutId);
             this._timeoutId = 0;
+        }
+        if (this._primaryWindowChangedId && this._settings) {
+            this._settings.disconnect(this._primaryWindowChangedId);
+            this._primaryWindowChangedId = 0;
         }
         this._panel?.disable();
         this._panel = null;
