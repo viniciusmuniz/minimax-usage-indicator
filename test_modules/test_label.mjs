@@ -35,5 +35,30 @@ test('rounds percentage to nearest integer', () => {
     const q = {
         interval: { used: 33, total: 100, minutesRemaining: 60 },
     };
-    assert.equal(labelFor(q, 'interval'), '33% · 1h 00m');
+    assert.equal(labelFor(q, 'interval'), '33% · 1h');
+});
+
+test('shows days+hours when minutesRemaining >= 24h', () => {
+    const q = { interval: { used: 1, total: 100, minutesRemaining: 3600 } }; // 60h
+    assert.equal(labelFor(q, 'interval'), '1% · 2d 12h');
+});
+
+test('shows days+minutes when hours are zero but minutes remain', () => {
+    const q = { interval: { used: 1, total: 100, minutesRemaining: 1445 } }; // 24h 5m
+    assert.equal(labelFor(q, 'interval'), '1% · 1d 05m');
+});
+
+test('collapses to days-only when minutesRemaining is a whole number of days', () => {
+    const q = { interval: { used: 1, total: 100, minutesRemaining: 2880 } }; // 48h
+    assert.equal(labelFor(q, 'interval'), '1% · 2d');
+});
+
+test('collapses trailing zero minutes even when days are present', () => {
+    const q = { interval: { used: 1, total: 100, minutesRemaining: 1500 } }; // 25h
+    assert.equal(labelFor(q, 'interval'), '1% · 1d 1h');
+});
+
+test('zero-pads minutes inside a day+hour format', () => {
+    const q = { interval: { used: 1, total: 100, minutesRemaining: 1530 } }; // 25h 30m
+    assert.equal(labelFor(q, 'interval'), '1% · 1d 1h 30m');
 });

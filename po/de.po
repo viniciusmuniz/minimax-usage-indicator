@@ -126,6 +126,18 @@ msgstr "{h} h {m} m"
 msgid "{h}h"
 msgstr "{h} h"
 
+msgid "{d}d"
+msgstr "{d} d"
+
+msgid "{d}d {h}h {m}m"
+msgstr "{d} d {h} h {m} m"
+
+msgid "{d}d {m}m"
+msgstr "{d} d {m} m"
+
+msgid "{d}d {h}h"
+msgstr "{d} d {h} h"
+
 msgid "RED"
 msgstr "ROT"
 

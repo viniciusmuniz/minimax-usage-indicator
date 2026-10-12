@@ -162,8 +162,24 @@ msgstr ""
 msgid "{h}h {m}m"
 msgstr ""
 
-#: modules/popover.js:47
+#: modules/popover.js:47 modules/label.js:38
 msgid "{h}h"
+msgstr ""
+
+#: modules/label.js:32 modules/popover.js:41
+msgid "{d}d"
+msgstr ""
+
+#: modules/label.js:35 modules/popover.js:44
+msgid "{d}d {h}h {m}m"
+msgstr ""
+
+#: modules/label.js:34 modules/popover.js:43
+msgid "{d}d {m}m"
+msgstr ""
+
+#: modules/label.js:36 modules/popover.js:42
+msgid "{d}d {h}h"
 msgstr ""
 
 #: modules/popover.js:52

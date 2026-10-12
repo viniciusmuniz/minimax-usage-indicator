@@ -33,10 +33,17 @@ const HINT_STYLE = 'font-size: 10px; margin-top: 8px; color: #888; font-style: i
 
 function fmtMinutes(min) {
     if (min < 60) return _f('{m}m', { m: min });
-    const h = Math.floor(min / 60);
+    const d = Math.floor(min / 1440);
+    const h = Math.floor((min % 1440) / 60);
     const m = min % 60;
-    if (m) return _f('{h}h {m}m', { h, m });
-    return _f('{h}h', { h });
+    if (d > 0) {
+        if (h === 0 && m === 0) return _f('{d}d', { d });
+        if (h === 0) return _f('{d}d {m}m', { d, m: String(m).padStart(2, '0') });
+        if (m === 0) return _f('{d}d {h}h', { d, h });
+        return _f('{d}d {h}h {m}m', { d, h, m: String(m).padStart(2, '0') });
+    }
+    if (m === 0) return _f('{h}h', { h });
+    return _f('{h}h {m}m', { h, m: String(m).padStart(2, '0') });
 }
 
 function colorWord(pct) {
